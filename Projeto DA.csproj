@@ -56,7 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppDbContext.cs" />
+    <Compile Include="DataBase\AppDbContext.cs" />
     <Compile Include="DataBase\Artigo.cs" />
     <Compile Include="DataBase\Compra.cs" />
     <Compile Include="DataBase\ItemCompra.cs" />
