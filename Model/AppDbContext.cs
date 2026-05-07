@@ -4,6 +4,7 @@ using System.Linq;
 using System.Data.Entity;
 using System.Text;
 using System.Threading.Tasks;
+using Projeto_DA.Classes;
 
 namespace Projeto_DA
 {
@@ -13,5 +14,8 @@ namespace Projeto_DA
         {
         }
         public DbSet<Utilizador> Utilizadores { get; set; }
+        public DbSet<Orcamento> Orcamentos { get; set; }
+        public DbSet<Compra> Compras { get; set; }
+        
     }
 }
