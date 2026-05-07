@@ -21,5 +21,34 @@ namespace Projeto_DA
         {
 
         }
+
+        private void LoginButton_Click(object sender, EventArgs e)
+        {
+            string login = UserText.Text.Trim();
+            string password = PassText.Text;
+
+            if (login == "" || password == "")
+            {
+                MessageBox.Show("Deve introduzir as suas credenciais");
+                return;
+            }
+
+            using (AppDbContext db = new AppDbContext())
+            {
+                Utilizador utilizador = db.Utilizadores.FirstOrDefault(u => u.Username == login
+                && u.Password == password);
+
+                if (utilizador != null)
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }
+                else
+                {
+
+                    MessageBox.Show("Username ou Password incorretos");
+                }
+            }
+        }
     }
 }

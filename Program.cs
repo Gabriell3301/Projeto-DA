@@ -16,7 +16,10 @@ namespace Projeto_DA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginPage());
+            if (new LoginPage().ShowDialog() == DialogResult.OK)
+            {
+                //Aqui entra o forms de pagina inicial que ainda não existe.
+            }
         }
     }
 }
