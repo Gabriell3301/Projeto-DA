@@ -20,7 +20,7 @@ namespace Projeto_DA.Classes
         public string Observacoes { get; set; }
 
 
-        public int UtilizadorCriacaoId { get; set; }
+        public int? UtilizadorCriacaoId { get; set; }
         public Utilizador UtilizadorCriacao { get; set; }
 
         public int? UtilizadorAlteracaoId { get; set; }
