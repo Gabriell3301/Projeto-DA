@@ -16,6 +16,19 @@ namespace Projeto_DA
         public DbSet<Utilizador> Utilizadores { get; set; }
         public DbSet<Orcamento> Orcamentos { get; set; }
         public DbSet<Compra> Compras { get; set; }
-        
+        public DbSet<Artigo> Artigos { get; set; }
+        public DbSet<ItemCompra> ItensCompra { get; set; }
+        public DbSet<TipoArtigo> TiposArtigos { get; set; }
+
+
+
+
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<ItemCompra>()
+        //        .HasRequired(i => i.UtilizadorCriacao)
+        //        .WithMany()
+        //        .WillCascadeOnDelete(false);
+        //}
     }
 }
