@@ -38,7 +38,6 @@
             this.NumItensPrevistos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorEstimado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.buttonNovaCompra = new System.Windows.Forms.Button();
-            this.buttonVerDetalhes = new System.Windows.Forms.Button();
             this.buttonFecharCompra = new System.Windows.Forms.Button();
             this.labelNomeApp = new System.Windows.Forms.Label();
             this.buttonAbrirCompra = new System.Windows.Forms.Button();
@@ -137,7 +136,7 @@
             // buttonNovaCompra
             // 
             this.buttonNovaCompra.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.buttonNovaCompra.Location = new System.Drawing.Point(580, 444);
+            this.buttonNovaCompra.Location = new System.Drawing.Point(669, 444);
             this.buttonNovaCompra.Name = "buttonNovaCompra";
             this.buttonNovaCompra.Size = new System.Drawing.Size(137, 35);
             this.buttonNovaCompra.TabIndex = 2;
@@ -145,26 +144,16 @@
             this.buttonNovaCompra.UseVisualStyleBackColor = false;
             this.buttonNovaCompra.Click += new System.EventHandler(this.buttonNovaCompra_Click);
             // 
-            // buttonVerDetalhes
-            // 
-            this.buttonVerDetalhes.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.buttonVerDetalhes.Location = new System.Drawing.Point(899, 444);
-            this.buttonVerDetalhes.Name = "buttonVerDetalhes";
-            this.buttonVerDetalhes.Size = new System.Drawing.Size(137, 35);
-            this.buttonVerDetalhes.TabIndex = 3;
-            this.buttonVerDetalhes.Text = "Ver Detalhes";
-            this.buttonVerDetalhes.UseVisualStyleBackColor = false;
-            this.buttonVerDetalhes.Click += new System.EventHandler(this.buttonVerDetalhes_Click);
-            // 
             // buttonFecharCompra
             // 
             this.buttonFecharCompra.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.buttonFecharCompra.Location = new System.Drawing.Point(735, 444);
+            this.buttonFecharCompra.Location = new System.Drawing.Point(869, 444);
             this.buttonFecharCompra.Name = "buttonFecharCompra";
             this.buttonFecharCompra.Size = new System.Drawing.Size(137, 35);
             this.buttonFecharCompra.TabIndex = 4;
             this.buttonFecharCompra.Text = "Fechar Compra";
             this.buttonFecharCompra.UseVisualStyleBackColor = false;
+            this.buttonFecharCompra.Click += new System.EventHandler(this.buttonFecharCompra_Click);
             // 
             // labelNomeApp
             // 
@@ -177,12 +166,13 @@
             // buttonAbrirCompra
             // 
             this.buttonAbrirCompra.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.buttonAbrirCompra.Location = new System.Drawing.Point(418, 444);
+            this.buttonAbrirCompra.Location = new System.Drawing.Point(479, 444);
             this.buttonAbrirCompra.Name = "buttonAbrirCompra";
             this.buttonAbrirCompra.Size = new System.Drawing.Size(137, 35);
             this.buttonAbrirCompra.TabIndex = 9;
             this.buttonAbrirCompra.Text = "Abrir Compra";
             this.buttonAbrirCompra.UseVisualStyleBackColor = false;
+            this.buttonAbrirCompra.Click += new System.EventHandler(this.buttonAbrirCompra_Click);
             // 
             // buttonDashboard
             // 
@@ -354,7 +344,6 @@
             this.Controls.Add(this.buttonAbrirCompra);
             this.Controls.Add(this.labelNomeApp);
             this.Controls.Add(this.buttonFecharCompra);
-            this.Controls.Add(this.buttonVerDetalhes);
             this.Controls.Add(this.buttonNovaCompra);
             this.Controls.Add(this.dgvComprasEmAberto);
             this.Controls.Add(this.menuStrip1);
@@ -376,7 +365,6 @@
         #endregion
         private System.Windows.Forms.DataGridView dgvComprasEmAberto;
         private System.Windows.Forms.Button buttonNovaCompra;
-        private System.Windows.Forms.Button buttonVerDetalhes;
         private System.Windows.Forms.Button buttonFecharCompra;
         private System.Windows.Forms.Label labelNomeApp;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
