@@ -26,5 +26,10 @@ namespace Projeto_DA.View
         {
 
         }
+
+        private void buttonVerDetalhes_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

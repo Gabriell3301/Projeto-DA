@@ -28,30 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonAbrirCompra = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.dgvComprasEmAberto = new System.Windows.Forms.DataGridView();
-            this.buttonNovaCompra = new System.Windows.Forms.Button();
-            this.buttonVerDetalhes = new System.Windows.Forms.Button();
-            this.buttonFecharCompra = new System.Windows.Forms.Button();
-            this.labelNomeApp = new System.Windows.Forms.Label();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataCriacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Utilizador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NumItensPrevistos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ValorEstimado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonNovaCompra = new System.Windows.Forms.Button();
+            this.buttonVerDetalhes = new System.Windows.Forms.Button();
+            this.buttonFecharCompra = new System.Windows.Forms.Button();
+            this.labelNomeApp = new System.Windows.Forms.Label();
+            this.buttonAbrirCompra = new System.Windows.Forms.Button();
+            this.buttonDashboard = new System.Windows.Forms.Button();
+            this.buttonTiposArtigos = new System.Windows.Forms.Button();
+            this.buttonArtigos = new System.Windows.Forms.Button();
+            this.buttonOrcamentos = new System.Windows.Forms.Button();
+            this.buttonPlaneamentoCompras = new System.Windows.Forms.Button();
+            this.buttonEstatisticas = new System.Windows.Forms.Button();
+            this.panelSideBar = new System.Windows.Forms.Panel();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ficheiroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.utilizadoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.artigosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.orçamentoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comprasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estatísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.labelUtilizador = new System.Windows.Forms.Label();
+            this.labelOrcamento = new System.Windows.Forms.Label();
+            this.labelGasto = new System.Windows.Forms.Label();
+            this.labelDisponivel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComprasEmAberto)).BeginInit();
+            this.panelSideBar.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // buttonAbrirCompra
-            // 
-            this.buttonAbrirCompra.Location = new System.Drawing.Point(192, 139);
-            this.buttonAbrirCompra.Margin = new System.Windows.Forms.Padding(4);
-            this.buttonAbrirCompra.Name = "buttonAbrirCompra";
-            this.buttonAbrirCompra.Size = new System.Drawing.Size(137, 32);
-            this.buttonAbrirCompra.TabIndex = 0;
-            this.buttonAbrirCompra.Text = "Abrir Compra";
-            this.buttonAbrirCompra.UseVisualStyleBackColor = true;
             // 
             // dgvComprasEmAberto
             // 
@@ -63,49 +75,21 @@
             this.Utilizador,
             this.NumItensPrevistos,
             this.ValorEstimado});
-            this.dgvComprasEmAberto.Location = new System.Drawing.Point(372, 49);
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvComprasEmAberto.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvComprasEmAberto.Location = new System.Drawing.Point(388, 100);
             this.dgvComprasEmAberto.Margin = new System.Windows.Forms.Padding(4);
             this.dgvComprasEmAberto.Name = "dgvComprasEmAberto";
             this.dgvComprasEmAberto.RowHeadersWidth = 51;
             this.dgvComprasEmAberto.Size = new System.Drawing.Size(668, 439);
             this.dgvComprasEmAberto.TabIndex = 1;
-            // 
-            // buttonNovaCompra
-            // 
-            this.buttonNovaCompra.Location = new System.Drawing.Point(89, 203);
-            this.buttonNovaCompra.Name = "buttonNovaCompra";
-            this.buttonNovaCompra.Size = new System.Drawing.Size(137, 34);
-            this.buttonNovaCompra.TabIndex = 2;
-            this.buttonNovaCompra.Text = "Nova Compra";
-            this.buttonNovaCompra.UseVisualStyleBackColor = true;
-            this.buttonNovaCompra.Click += new System.EventHandler(this.buttonNovaCompra_Click);
-            // 
-            // buttonVerDetalhes
-            // 
-            this.buttonVerDetalhes.Location = new System.Drawing.Point(125, 243);
-            this.buttonVerDetalhes.Name = "buttonVerDetalhes";
-            this.buttonVerDetalhes.Size = new System.Drawing.Size(137, 30);
-            this.buttonVerDetalhes.TabIndex = 3;
-            this.buttonVerDetalhes.Text = "Ver Detalhes";
-            this.buttonVerDetalhes.UseVisualStyleBackColor = true;
-            // 
-            // buttonFecharCompra
-            // 
-            this.buttonFecharCompra.Location = new System.Drawing.Point(112, 178);
-            this.buttonFecharCompra.Name = "buttonFecharCompra";
-            this.buttonFecharCompra.Size = new System.Drawing.Size(137, 35);
-            this.buttonFecharCompra.TabIndex = 4;
-            this.buttonFecharCompra.Text = "Fechar Compra";
-            this.buttonFecharCompra.UseVisualStyleBackColor = true;
-            // 
-            // labelNomeApp
-            // 
-            this.labelNomeApp.AutoSize = true;
-            this.labelNomeApp.Location = new System.Drawing.Point(12, 22);
-            this.labelNomeApp.Name = "labelNomeApp";
-            this.labelNomeApp.Size = new System.Drawing.Size(68, 16);
-            this.labelNomeApp.TabIndex = 8;
-            this.labelNomeApp.Text = "iShopping";
             // 
             // Id
             // 
@@ -150,31 +134,246 @@
             this.ValorEstimado.Name = "ValorEstimado";
             this.ValorEstimado.Width = 125;
             // 
+            // buttonNovaCompra
+            // 
+            this.buttonNovaCompra.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.buttonNovaCompra.Location = new System.Drawing.Point(580, 444);
+            this.buttonNovaCompra.Name = "buttonNovaCompra";
+            this.buttonNovaCompra.Size = new System.Drawing.Size(137, 35);
+            this.buttonNovaCompra.TabIndex = 2;
+            this.buttonNovaCompra.Text = "Nova Compra";
+            this.buttonNovaCompra.UseVisualStyleBackColor = false;
+            this.buttonNovaCompra.Click += new System.EventHandler(this.buttonNovaCompra_Click);
+            // 
+            // buttonVerDetalhes
+            // 
+            this.buttonVerDetalhes.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.buttonVerDetalhes.Location = new System.Drawing.Point(899, 444);
+            this.buttonVerDetalhes.Name = "buttonVerDetalhes";
+            this.buttonVerDetalhes.Size = new System.Drawing.Size(137, 35);
+            this.buttonVerDetalhes.TabIndex = 3;
+            this.buttonVerDetalhes.Text = "Ver Detalhes";
+            this.buttonVerDetalhes.UseVisualStyleBackColor = false;
+            this.buttonVerDetalhes.Click += new System.EventHandler(this.buttonVerDetalhes_Click);
+            // 
+            // buttonFecharCompra
+            // 
+            this.buttonFecharCompra.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.buttonFecharCompra.Location = new System.Drawing.Point(735, 444);
+            this.buttonFecharCompra.Name = "buttonFecharCompra";
+            this.buttonFecharCompra.Size = new System.Drawing.Size(137, 35);
+            this.buttonFecharCompra.TabIndex = 4;
+            this.buttonFecharCompra.Text = "Fechar Compra";
+            this.buttonFecharCompra.UseVisualStyleBackColor = false;
+            // 
+            // labelNomeApp
+            // 
+            this.labelNomeApp.AutoSize = true;
+            this.labelNomeApp.Location = new System.Drawing.Point(-3, 28);
+            this.labelNomeApp.Name = "labelNomeApp";
+            this.labelNomeApp.Size = new System.Drawing.Size(0, 16);
+            this.labelNomeApp.TabIndex = 8;
+            // 
+            // buttonAbrirCompra
+            // 
+            this.buttonAbrirCompra.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.buttonAbrirCompra.Location = new System.Drawing.Point(418, 444);
+            this.buttonAbrirCompra.Name = "buttonAbrirCompra";
+            this.buttonAbrirCompra.Size = new System.Drawing.Size(137, 35);
+            this.buttonAbrirCompra.TabIndex = 9;
+            this.buttonAbrirCompra.Text = "Abrir Compra";
+            this.buttonAbrirCompra.UseVisualStyleBackColor = false;
+            // 
+            // buttonDashboard
+            // 
+            this.buttonDashboard.Location = new System.Drawing.Point(10, 0);
+            this.buttonDashboard.Name = "buttonDashboard";
+            this.buttonDashboard.Size = new System.Drawing.Size(275, 43);
+            this.buttonDashboard.TabIndex = 10;
+            this.buttonDashboard.Text = "Painel Principal";
+            this.buttonDashboard.UseVisualStyleBackColor = true;
+            // 
+            // buttonTiposArtigos
+            // 
+            this.buttonTiposArtigos.Location = new System.Drawing.Point(10, 74);
+            this.buttonTiposArtigos.Name = "buttonTiposArtigos";
+            this.buttonTiposArtigos.Size = new System.Drawing.Size(275, 43);
+            this.buttonTiposArtigos.TabIndex = 11;
+            this.buttonTiposArtigos.Text = "Tipos de Artigos";
+            this.buttonTiposArtigos.UseVisualStyleBackColor = true;
+            // 
+            // buttonArtigos
+            // 
+            this.buttonArtigos.Location = new System.Drawing.Point(10, 160);
+            this.buttonArtigos.Name = "buttonArtigos";
+            this.buttonArtigos.Size = new System.Drawing.Size(275, 43);
+            this.buttonArtigos.TabIndex = 12;
+            this.buttonArtigos.Text = "Artigos";
+            this.buttonArtigos.UseVisualStyleBackColor = true;
+            // 
+            // buttonOrcamentos
+            // 
+            this.buttonOrcamentos.Location = new System.Drawing.Point(10, 237);
+            this.buttonOrcamentos.Name = "buttonOrcamentos";
+            this.buttonOrcamentos.Size = new System.Drawing.Size(275, 43);
+            this.buttonOrcamentos.TabIndex = 13;
+            this.buttonOrcamentos.Text = "Orçamentos";
+            this.buttonOrcamentos.UseVisualStyleBackColor = true;
+            // 
+            // buttonPlaneamentoCompras
+            // 
+            this.buttonPlaneamentoCompras.Location = new System.Drawing.Point(10, 319);
+            this.buttonPlaneamentoCompras.Name = "buttonPlaneamentoCompras";
+            this.buttonPlaneamentoCompras.Size = new System.Drawing.Size(275, 43);
+            this.buttonPlaneamentoCompras.TabIndex = 14;
+            this.buttonPlaneamentoCompras.Text = "Planeamento de Compras";
+            this.buttonPlaneamentoCompras.UseVisualStyleBackColor = true;
+            // 
+            // buttonEstatisticas
+            // 
+            this.buttonEstatisticas.Location = new System.Drawing.Point(10, 396);
+            this.buttonEstatisticas.Name = "buttonEstatisticas";
+            this.buttonEstatisticas.Size = new System.Drawing.Size(275, 43);
+            this.buttonEstatisticas.TabIndex = 15;
+            this.buttonEstatisticas.Text = "Estatísticas";
+            this.buttonEstatisticas.UseVisualStyleBackColor = true;
+            // 
+            // panelSideBar
+            // 
+            this.panelSideBar.Controls.Add(this.buttonEstatisticas);
+            this.panelSideBar.Controls.Add(this.buttonPlaneamentoCompras);
+            this.panelSideBar.Controls.Add(this.buttonOrcamentos);
+            this.panelSideBar.Controls.Add(this.buttonArtigos);
+            this.panelSideBar.Controls.Add(this.buttonTiposArtigos);
+            this.panelSideBar.Controls.Add(this.buttonDashboard);
+            this.panelSideBar.Location = new System.Drawing.Point(30, 100);
+            this.panelSideBar.Name = "panelSideBar";
+            this.panelSideBar.Size = new System.Drawing.Size(328, 439);
+            this.panelSideBar.TabIndex = 16;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ficheiroToolStripMenuItem,
+            this.utilizadoresToolStripMenuItem,
+            this.artigosToolStripMenuItem,
+            this.orçamentoToolStripMenuItem,
+            this.comprasToolStripMenuItem,
+            this.estatísticasToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1119, 28);
+            this.menuStrip1.TabIndex = 17;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // ficheiroToolStripMenuItem
+            // 
+            this.ficheiroToolStripMenuItem.Name = "ficheiroToolStripMenuItem";
+            this.ficheiroToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.ficheiroToolStripMenuItem.Text = "Ficheiro";
+            // 
+            // utilizadoresToolStripMenuItem
+            // 
+            this.utilizadoresToolStripMenuItem.Name = "utilizadoresToolStripMenuItem";
+            this.utilizadoresToolStripMenuItem.Size = new System.Drawing.Size(102, 24);
+            this.utilizadoresToolStripMenuItem.Text = "Utilizadores";
+            // 
+            // artigosToolStripMenuItem
+            // 
+            this.artigosToolStripMenuItem.Name = "artigosToolStripMenuItem";
+            this.artigosToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
+            this.artigosToolStripMenuItem.Text = "Artigos";
+            // 
+            // orçamentoToolStripMenuItem
+            // 
+            this.orçamentoToolStripMenuItem.Name = "orçamentoToolStripMenuItem";
+            this.orçamentoToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
+            this.orçamentoToolStripMenuItem.Text = "Orçamento";
+            // 
+            // comprasToolStripMenuItem
+            // 
+            this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.comprasToolStripMenuItem.Text = "Compras";
+            // 
+            // estatísticasToolStripMenuItem
+            // 
+            this.estatísticasToolStripMenuItem.Name = "estatísticasToolStripMenuItem";
+            this.estatísticasToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
+            this.estatísticasToolStripMenuItem.Text = "Estatísticas";
+            // 
+            // labelUtilizador
+            // 
+            this.labelUtilizador.AutoSize = true;
+            this.labelUtilizador.BackColor = System.Drawing.Color.Transparent;
+            this.labelUtilizador.Location = new System.Drawing.Point(385, 66);
+            this.labelUtilizador.Name = "labelUtilizador";
+            this.labelUtilizador.Size = new System.Drawing.Size(66, 16);
+            this.labelUtilizador.TabIndex = 18;
+            this.labelUtilizador.Text = "Utilizador:";
+            // 
+            // labelOrcamento
+            // 
+            this.labelOrcamento.AutoSize = true;
+            this.labelOrcamento.Location = new System.Drawing.Point(385, 579);
+            this.labelOrcamento.Name = "labelOrcamento";
+            this.labelOrcamento.Size = new System.Drawing.Size(76, 16);
+            this.labelOrcamento.TabIndex = 19;
+            this.labelOrcamento.Text = "Orçamento:";
+            // 
+            // labelGasto
+            // 
+            this.labelGasto.AutoSize = true;
+            this.labelGasto.Location = new System.Drawing.Point(641, 579);
+            this.labelGasto.Name = "labelGasto";
+            this.labelGasto.Size = new System.Drawing.Size(115, 16);
+            this.labelGasto.TabIndex = 20;
+            this.labelGasto.Text = "Orçamento Gasto:";
+            // 
+            // labelDisponivel
+            // 
+            this.labelDisponivel.AutoSize = true;
+            this.labelDisponivel.Location = new System.Drawing.Point(913, 579);
+            this.labelDisponivel.Name = "labelDisponivel";
+            this.labelDisponivel.Size = new System.Drawing.Size(143, 16);
+            this.labelDisponivel.TabIndex = 21;
+            this.labelDisponivel.Text = "Orçamento Disponível:";
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.NavajoWhite;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.ClientSize = new System.Drawing.Size(1119, 624);
+            this.Controls.Add(this.labelDisponivel);
+            this.Controls.Add(this.labelGasto);
+            this.Controls.Add(this.labelOrcamento);
+            this.Controls.Add(this.labelUtilizador);
+            this.Controls.Add(this.panelSideBar);
+            this.Controls.Add(this.buttonAbrirCompra);
             this.Controls.Add(this.labelNomeApp);
             this.Controls.Add(this.buttonFecharCompra);
             this.Controls.Add(this.buttonVerDetalhes);
             this.Controls.Add(this.buttonNovaCompra);
             this.Controls.Add(this.dgvComprasEmAberto);
-            this.Controls.Add(this.buttonAbrirCompra);
+            this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomePage";
             this.Text = "Home";
             this.Load += new System.EventHandler(this.HomePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvComprasEmAberto)).EndInit();
+            this.panelSideBar.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonAbrirCompra;
         private System.Windows.Forms.DataGridView dgvComprasEmAberto;
         private System.Windows.Forms.Button buttonNovaCompra;
         private System.Windows.Forms.Button buttonVerDetalhes;
@@ -186,5 +385,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Utilizador;
         private System.Windows.Forms.DataGridViewTextBoxColumn NumItensPrevistos;
         private System.Windows.Forms.DataGridViewTextBoxColumn ValorEstimado;
+        private System.Windows.Forms.Button buttonAbrirCompra;
+        private System.Windows.Forms.Button buttonDashboard;
+        private System.Windows.Forms.Button buttonTiposArtigos;
+        private System.Windows.Forms.Button buttonArtigos;
+        private System.Windows.Forms.Button buttonOrcamentos;
+        private System.Windows.Forms.Button buttonPlaneamentoCompras;
+        private System.Windows.Forms.Button buttonEstatisticas;
+        private System.Windows.Forms.Panel panelSideBar;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem ficheiroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem utilizadoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem artigosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem orçamentoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem comprasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estatísticasToolStripMenuItem;
+        private System.Windows.Forms.Label labelUtilizador;
+        private System.Windows.Forms.Label labelOrcamento;
+        private System.Windows.Forms.Label labelGasto;
+        private System.Windows.Forms.Label labelDisponivel;
     }
 }
