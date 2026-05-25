@@ -16,5 +16,15 @@ namespace Projeto_DA.View
         {
             InitializeComponent();
         }
+
+        private void buttonNovaCompra_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

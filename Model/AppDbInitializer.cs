@@ -11,7 +11,7 @@ namespace Projeto_DA.Model
             {
                 Nome = "Admin",
                 Username = "admin",
-                Password = "admin123" // In a real application, use hashed passwords
+                Password = "admin123" 
             });
             // Seed initial data if necessary
             base.Seed(context);
