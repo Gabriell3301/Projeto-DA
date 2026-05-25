@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto_DA.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace Projeto_DA
         {
             InitializeComponent();
         }
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -48,7 +50,20 @@ namespace Projeto_DA
 
                     MessageBox.Show("Username ou Password incorretos");
                 }
+
+
+                // Se o login for bem-sucedido, abre a HomePage
+                if (utilizador != null)
+                {
+                    this.Hide();
+                    HomePage home = new HomePage(utilizador);   
+                    home.ShowDialog();
+                    this.Close();
+                }
+
             }
         }
     }
 }
+
+

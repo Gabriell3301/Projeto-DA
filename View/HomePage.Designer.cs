@@ -83,7 +83,7 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvComprasEmAberto.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvComprasEmAberto.Location = new System.Drawing.Point(388, 100);
+            this.dgvComprasEmAberto.Location = new System.Drawing.Point(409, 100);
             this.dgvComprasEmAberto.Margin = new System.Windows.Forms.Padding(4);
             this.dgvComprasEmAberto.Name = "dgvComprasEmAberto";
             this.dgvComprasEmAberto.RowHeadersWidth = 51;
@@ -136,7 +136,7 @@
             // buttonNovaCompra
             // 
             this.buttonNovaCompra.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.buttonNovaCompra.Location = new System.Drawing.Point(669, 444);
+            this.buttonNovaCompra.Location = new System.Drawing.Point(684, 444);
             this.buttonNovaCompra.Name = "buttonNovaCompra";
             this.buttonNovaCompra.Size = new System.Drawing.Size(137, 35);
             this.buttonNovaCompra.TabIndex = 2;
@@ -147,7 +147,7 @@
             // buttonFecharCompra
             // 
             this.buttonFecharCompra.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.buttonFecharCompra.Location = new System.Drawing.Point(869, 444);
+            this.buttonFecharCompra.Location = new System.Drawing.Point(886, 444);
             this.buttonFecharCompra.Name = "buttonFecharCompra";
             this.buttonFecharCompra.Size = new System.Drawing.Size(137, 35);
             this.buttonFecharCompra.TabIndex = 4;
@@ -166,7 +166,7 @@
             // buttonAbrirCompra
             // 
             this.buttonAbrirCompra.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.buttonAbrirCompra.Location = new System.Drawing.Point(479, 444);
+            this.buttonAbrirCompra.Location = new System.Drawing.Point(484, 444);
             this.buttonAbrirCompra.Name = "buttonAbrirCompra";
             this.buttonAbrirCompra.Size = new System.Drawing.Size(137, 35);
             this.buttonAbrirCompra.TabIndex = 9;
@@ -334,7 +334,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.BackColor = System.Drawing.Color.AntiqueWhite;
             this.ClientSize = new System.Drawing.Size(1119, 624);
             this.Controls.Add(this.labelDisponivel);
             this.Controls.Add(this.labelGasto);
