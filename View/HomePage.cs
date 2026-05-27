@@ -18,6 +18,7 @@ namespace Projeto_DA.View
             CarregarComprasEmAberto();
         }
 
+
         private void ConfigurarHomePage()
         {
             // Título da janela
