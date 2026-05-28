@@ -80,5 +80,10 @@ namespace Projeto_DA.View
         {
             
         }
+
+        private void buttonTiposArtigos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

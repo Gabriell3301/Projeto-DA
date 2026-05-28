@@ -13,6 +13,7 @@ namespace Projeto_DA
 {
     public partial class LoginPage : Form
     {
+        public Utilizador UtilizadorLogado { get; private set; }
         public LoginPage()
         {
             InitializeComponent();
@@ -43,6 +44,7 @@ namespace Projeto_DA
                 if (utilizador != null)
                 {
                     this.DialogResult = DialogResult.OK;
+                    UtilizadorLogado = utilizador;
                     this.Close();
                 }
                 else
@@ -50,17 +52,6 @@ namespace Projeto_DA
 
                     MessageBox.Show("Username ou Password incorretos");
                 }
-
-
-                // Se o login for bem-sucedido, abre a HomePage
-                if (utilizador != null)
-                {
-                    this.Hide();
-                    HomePage home = new HomePage(utilizador);   
-                    home.ShowDialog();
-                    this.Close();
-                }
-
             }
         }
     }

@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Projeto_DA.Model;
+using Projeto_DA.View;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Data.Entity;
 using System.Windows.Forms;
-using Projeto_DA.Model;
 
 namespace Projeto_DA
 {
@@ -25,10 +26,13 @@ namespace Projeto_DA
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            if (new LoginPage().ShowDialog() == DialogResult.OK)
+            LoginPage loginPage = new LoginPage();
+            if (loginPage.ShowDialog() == DialogResult.OK)
             {
                 MessageBox.Show("Login bem sucedido!");
                 //Aqui entra o forms de pagina inicial que ainda não existe.
+                HomePage home = new HomePage(loginPage.UtilizadorLogado);
+                home.ShowDialog();
             }
         }
     }
