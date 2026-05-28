@@ -83,11 +83,10 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvComprasEmAberto.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvComprasEmAberto.Location = new System.Drawing.Point(409, 100);
-            this.dgvComprasEmAberto.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvComprasEmAberto.Location = new System.Drawing.Point(307, 81);
             this.dgvComprasEmAberto.Name = "dgvComprasEmAberto";
             this.dgvComprasEmAberto.RowHeadersWidth = 51;
-            this.dgvComprasEmAberto.Size = new System.Drawing.Size(668, 439);
+            this.dgvComprasEmAberto.Size = new System.Drawing.Size(501, 357);
             this.dgvComprasEmAberto.TabIndex = 1;
             // 
             // Id
@@ -136,9 +135,10 @@
             // buttonNovaCompra
             // 
             this.buttonNovaCompra.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.buttonNovaCompra.Location = new System.Drawing.Point(684, 444);
+            this.buttonNovaCompra.Location = new System.Drawing.Point(513, 361);
+            this.buttonNovaCompra.Margin = new System.Windows.Forms.Padding(2);
             this.buttonNovaCompra.Name = "buttonNovaCompra";
-            this.buttonNovaCompra.Size = new System.Drawing.Size(137, 35);
+            this.buttonNovaCompra.Size = new System.Drawing.Size(103, 28);
             this.buttonNovaCompra.TabIndex = 2;
             this.buttonNovaCompra.Text = "Nova Compra";
             this.buttonNovaCompra.UseVisualStyleBackColor = false;
@@ -147,9 +147,10 @@
             // buttonFecharCompra
             // 
             this.buttonFecharCompra.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.buttonFecharCompra.Location = new System.Drawing.Point(886, 444);
+            this.buttonFecharCompra.Location = new System.Drawing.Point(664, 361);
+            this.buttonFecharCompra.Margin = new System.Windows.Forms.Padding(2);
             this.buttonFecharCompra.Name = "buttonFecharCompra";
-            this.buttonFecharCompra.Size = new System.Drawing.Size(137, 35);
+            this.buttonFecharCompra.Size = new System.Drawing.Size(103, 28);
             this.buttonFecharCompra.TabIndex = 4;
             this.buttonFecharCompra.Text = "Fechar Compra";
             this.buttonFecharCompra.UseVisualStyleBackColor = false;
@@ -158,17 +159,19 @@
             // labelNomeApp
             // 
             this.labelNomeApp.AutoSize = true;
-            this.labelNomeApp.Location = new System.Drawing.Point(-3, 28);
+            this.labelNomeApp.Location = new System.Drawing.Point(-2, 23);
+            this.labelNomeApp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNomeApp.Name = "labelNomeApp";
-            this.labelNomeApp.Size = new System.Drawing.Size(0, 16);
+            this.labelNomeApp.Size = new System.Drawing.Size(0, 13);
             this.labelNomeApp.TabIndex = 8;
             // 
             // buttonAbrirCompra
             // 
             this.buttonAbrirCompra.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.buttonAbrirCompra.Location = new System.Drawing.Point(484, 444);
+            this.buttonAbrirCompra.Location = new System.Drawing.Point(363, 361);
+            this.buttonAbrirCompra.Margin = new System.Windows.Forms.Padding(2);
             this.buttonAbrirCompra.Name = "buttonAbrirCompra";
-            this.buttonAbrirCompra.Size = new System.Drawing.Size(137, 35);
+            this.buttonAbrirCompra.Size = new System.Drawing.Size(103, 28);
             this.buttonAbrirCompra.TabIndex = 9;
             this.buttonAbrirCompra.Text = "Abrir Compra";
             this.buttonAbrirCompra.UseVisualStyleBackColor = false;
@@ -176,54 +179,61 @@
             // 
             // buttonDashboard
             // 
-            this.buttonDashboard.Location = new System.Drawing.Point(10, 0);
+            this.buttonDashboard.Location = new System.Drawing.Point(8, 0);
+            this.buttonDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDashboard.Name = "buttonDashboard";
-            this.buttonDashboard.Size = new System.Drawing.Size(275, 43);
+            this.buttonDashboard.Size = new System.Drawing.Size(206, 35);
             this.buttonDashboard.TabIndex = 10;
             this.buttonDashboard.Text = "Painel Principal";
             this.buttonDashboard.UseVisualStyleBackColor = true;
             // 
             // buttonTiposArtigos
             // 
-            this.buttonTiposArtigos.Location = new System.Drawing.Point(10, 74);
+            this.buttonTiposArtigos.Location = new System.Drawing.Point(8, 60);
+            this.buttonTiposArtigos.Margin = new System.Windows.Forms.Padding(2);
             this.buttonTiposArtigos.Name = "buttonTiposArtigos";
-            this.buttonTiposArtigos.Size = new System.Drawing.Size(275, 43);
+            this.buttonTiposArtigos.Size = new System.Drawing.Size(206, 35);
             this.buttonTiposArtigos.TabIndex = 11;
             this.buttonTiposArtigos.Text = "Tipos de Artigos";
             this.buttonTiposArtigos.UseVisualStyleBackColor = true;
+            this.buttonTiposArtigos.Click += new System.EventHandler(this.buttonTiposArtigos_Click);
             // 
             // buttonArtigos
             // 
-            this.buttonArtigos.Location = new System.Drawing.Point(10, 160);
+            this.buttonArtigos.Location = new System.Drawing.Point(8, 130);
+            this.buttonArtigos.Margin = new System.Windows.Forms.Padding(2);
             this.buttonArtigos.Name = "buttonArtigos";
-            this.buttonArtigos.Size = new System.Drawing.Size(275, 43);
+            this.buttonArtigos.Size = new System.Drawing.Size(206, 35);
             this.buttonArtigos.TabIndex = 12;
             this.buttonArtigos.Text = "Artigos";
             this.buttonArtigos.UseVisualStyleBackColor = true;
             // 
             // buttonOrcamentos
             // 
-            this.buttonOrcamentos.Location = new System.Drawing.Point(10, 237);
+            this.buttonOrcamentos.Location = new System.Drawing.Point(8, 193);
+            this.buttonOrcamentos.Margin = new System.Windows.Forms.Padding(2);
             this.buttonOrcamentos.Name = "buttonOrcamentos";
-            this.buttonOrcamentos.Size = new System.Drawing.Size(275, 43);
+            this.buttonOrcamentos.Size = new System.Drawing.Size(206, 35);
             this.buttonOrcamentos.TabIndex = 13;
             this.buttonOrcamentos.Text = "Orçamentos";
             this.buttonOrcamentos.UseVisualStyleBackColor = true;
             // 
             // buttonPlaneamentoCompras
             // 
-            this.buttonPlaneamentoCompras.Location = new System.Drawing.Point(10, 319);
+            this.buttonPlaneamentoCompras.Location = new System.Drawing.Point(8, 259);
+            this.buttonPlaneamentoCompras.Margin = new System.Windows.Forms.Padding(2);
             this.buttonPlaneamentoCompras.Name = "buttonPlaneamentoCompras";
-            this.buttonPlaneamentoCompras.Size = new System.Drawing.Size(275, 43);
+            this.buttonPlaneamentoCompras.Size = new System.Drawing.Size(206, 35);
             this.buttonPlaneamentoCompras.TabIndex = 14;
             this.buttonPlaneamentoCompras.Text = "Planeamento de Compras";
             this.buttonPlaneamentoCompras.UseVisualStyleBackColor = true;
             // 
             // buttonEstatisticas
             // 
-            this.buttonEstatisticas.Location = new System.Drawing.Point(10, 396);
+            this.buttonEstatisticas.Location = new System.Drawing.Point(8, 322);
+            this.buttonEstatisticas.Margin = new System.Windows.Forms.Padding(2);
             this.buttonEstatisticas.Name = "buttonEstatisticas";
-            this.buttonEstatisticas.Size = new System.Drawing.Size(275, 43);
+            this.buttonEstatisticas.Size = new System.Drawing.Size(206, 35);
             this.buttonEstatisticas.TabIndex = 15;
             this.buttonEstatisticas.Text = "Estatísticas";
             this.buttonEstatisticas.UseVisualStyleBackColor = true;
@@ -236,9 +246,10 @@
             this.panelSideBar.Controls.Add(this.buttonArtigos);
             this.panelSideBar.Controls.Add(this.buttonTiposArtigos);
             this.panelSideBar.Controls.Add(this.buttonDashboard);
-            this.panelSideBar.Location = new System.Drawing.Point(30, 100);
+            this.panelSideBar.Location = new System.Drawing.Point(22, 81);
+            this.panelSideBar.Margin = new System.Windows.Forms.Padding(2);
             this.panelSideBar.Name = "panelSideBar";
-            this.panelSideBar.Size = new System.Drawing.Size(328, 439);
+            this.panelSideBar.Size = new System.Drawing.Size(246, 357);
             this.panelSideBar.TabIndex = 16;
             // 
             // menuStrip1
@@ -253,89 +264,94 @@
             this.estatísticasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1119, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(839, 24);
             this.menuStrip1.TabIndex = 17;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // ficheiroToolStripMenuItem
             // 
             this.ficheiroToolStripMenuItem.Name = "ficheiroToolStripMenuItem";
-            this.ficheiroToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.ficheiroToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.ficheiroToolStripMenuItem.Text = "Ficheiro";
             // 
             // utilizadoresToolStripMenuItem
             // 
             this.utilizadoresToolStripMenuItem.Name = "utilizadoresToolStripMenuItem";
-            this.utilizadoresToolStripMenuItem.Size = new System.Drawing.Size(102, 24);
+            this.utilizadoresToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
             this.utilizadoresToolStripMenuItem.Text = "Utilizadores";
             // 
             // artigosToolStripMenuItem
             // 
             this.artigosToolStripMenuItem.Name = "artigosToolStripMenuItem";
-            this.artigosToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
+            this.artigosToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.artigosToolStripMenuItem.Text = "Artigos";
             // 
             // orçamentoToolStripMenuItem
             // 
             this.orçamentoToolStripMenuItem.Name = "orçamentoToolStripMenuItem";
-            this.orçamentoToolStripMenuItem.Size = new System.Drawing.Size(97, 24);
+            this.orçamentoToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.orçamentoToolStripMenuItem.Text = "Orçamento";
             // 
             // comprasToolStripMenuItem
             // 
             this.comprasToolStripMenuItem.Name = "comprasToolStripMenuItem";
-            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.comprasToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             this.comprasToolStripMenuItem.Text = "Compras";
             // 
             // estatísticasToolStripMenuItem
             // 
             this.estatísticasToolStripMenuItem.Name = "estatísticasToolStripMenuItem";
-            this.estatísticasToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
+            this.estatísticasToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
             this.estatísticasToolStripMenuItem.Text = "Estatísticas";
             // 
             // labelUtilizador
             // 
             this.labelUtilizador.AutoSize = true;
             this.labelUtilizador.BackColor = System.Drawing.Color.Transparent;
-            this.labelUtilizador.Location = new System.Drawing.Point(385, 66);
+            this.labelUtilizador.Location = new System.Drawing.Point(289, 54);
+            this.labelUtilizador.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelUtilizador.Name = "labelUtilizador";
-            this.labelUtilizador.Size = new System.Drawing.Size(66, 16);
+            this.labelUtilizador.Size = new System.Drawing.Size(53, 13);
             this.labelUtilizador.TabIndex = 18;
             this.labelUtilizador.Text = "Utilizador:";
             // 
             // labelOrcamento
             // 
             this.labelOrcamento.AutoSize = true;
-            this.labelOrcamento.Location = new System.Drawing.Point(385, 579);
+            this.labelOrcamento.Location = new System.Drawing.Point(289, 470);
+            this.labelOrcamento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelOrcamento.Name = "labelOrcamento";
-            this.labelOrcamento.Size = new System.Drawing.Size(76, 16);
+            this.labelOrcamento.Size = new System.Drawing.Size(62, 13);
             this.labelOrcamento.TabIndex = 19;
             this.labelOrcamento.Text = "Orçamento:";
             // 
             // labelGasto
             // 
             this.labelGasto.AutoSize = true;
-            this.labelGasto.Location = new System.Drawing.Point(641, 579);
+            this.labelGasto.Location = new System.Drawing.Point(481, 470);
+            this.labelGasto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelGasto.Name = "labelGasto";
-            this.labelGasto.Size = new System.Drawing.Size(115, 16);
+            this.labelGasto.Size = new System.Drawing.Size(93, 13);
             this.labelGasto.TabIndex = 20;
             this.labelGasto.Text = "Orçamento Gasto:";
             // 
             // labelDisponivel
             // 
             this.labelDisponivel.AutoSize = true;
-            this.labelDisponivel.Location = new System.Drawing.Point(913, 579);
+            this.labelDisponivel.Location = new System.Drawing.Point(685, 470);
+            this.labelDisponivel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDisponivel.Name = "labelDisponivel";
-            this.labelDisponivel.Size = new System.Drawing.Size(143, 16);
+            this.labelDisponivel.Size = new System.Drawing.Size(116, 13);
             this.labelDisponivel.TabIndex = 21;
             this.labelDisponivel.Text = "Orçamento Disponível:";
             // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.AntiqueWhite;
-            this.ClientSize = new System.Drawing.Size(1119, 624);
+            this.ClientSize = new System.Drawing.Size(839, 507);
             this.Controls.Add(this.labelDisponivel);
             this.Controls.Add(this.labelGasto);
             this.Controls.Add(this.labelOrcamento);
@@ -349,7 +365,6 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "HomePage";
             this.Text = "Home";
             this.Load += new System.EventHandler(this.HomePage_Load);
