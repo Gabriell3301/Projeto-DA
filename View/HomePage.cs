@@ -54,9 +54,20 @@ namespace Projeto_DA.View
 
         private void buttonNovaCompra_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Abrindo formulário de Nova Compra...", "Nova Compra");
-            //Em falta: Abrir o formulário de criação de nova compra
+
+        //Abre o formulário para uma Nova Compra   
+ 
+            using (var form = new NovaCompraForm(_utilizadorLogado))
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    CarregarComprasEmAberto(); // atualiza a lista
+                    MessageBox.Show("Compra criada com sucesso!", "Sucesso",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
         }
+        
 
         private void buttonAbrirCompra_Click(object sender, EventArgs e)
         {
