@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Projeto_DA.Classes;
 using Projeto_DA.Model;
 
 namespace Projeto_DA.View
@@ -47,6 +48,7 @@ namespace Projeto_DA.View
                 {
                     using (AppDbContext db = new AppDbContext())
                     {
+                        
                         var novaCompra = new Compra
                         {
                             Name = textBoxNomeCompra.Text.Trim(),
