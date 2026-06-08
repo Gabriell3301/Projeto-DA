@@ -83,55 +83,55 @@ NomeCompra ; DataCriacao ; DataFechada ; NomeArtigo ; ArtigoPrevisto ; ArtigoNao
 ---
 
 ## ⚙️ Tecnologias Utilizadas
-
+ 
 | Tecnologia | Versão |
 |---|---|
 | C# / .NET | WinForms |
 | Entity Framework | Code First |
-| SQL Server | — |
+| SQL Server LocalDB | Incluído com o Visual Studio |
 | Git / GitHub | Controlo de versões colaborativo |
-
+ 
 ---
-
+ 
 ## 🚀 Instalação e Configuração
-
+ 
 ### Pré-requisitos
-
+ 
 - Visual Studio 2022 (ou superior)
-- SQL Server (local ou remoto)
+- SQL Server LocalDB (incluído com o Visual Studio)
 - .NET Framework / .NET (versão utilizada no projeto)
 - Entity Framework (instalado via NuGet)
-
 ### Passos
-
+ 
 1. **Clonar o repositório:**
    ```bash
    git clone https://github.com/<utilizador>/iShopping.git
    cd iShopping
    ```
-
-2. **Configurar a ligação à base de dados:**
-
-   No ficheiro `App.config` (ou `appsettings.json`), atualizar a connection string:
-   ```xml
-   <connectionStrings>
-     <add name="iShoppingDb"
-          connectionString="Server=SEU_SERVIDOR;Database=iShoppingDB;Trusted_Connection=True;"
-          providerName="System.Data.SqlClient" />
-   </connectionStrings>
-   ```
-
-3. **Aplicar as migrações:**
-
+ 
+2. **Aplicar as migrações:**
    Na consola do Package Manager (Visual Studio):
    ```powershell
    Update-Database
    ```
-
-4. **Compilar e executar:**
-
+ 
+3. **Compilar e executar:**
    Abrir a solução `.sln` no Visual Studio, compilar (`Ctrl+Shift+B`) e executar (`F5`).
-
+---
+ 
+## 📁 Estrutura do ZIP de Entrega
+ 
+```
+GabriellBarbosa_MariaCotovio.zip
+├── Relatorio/
+│   ├── relatorio.pdf         # Manual de utilização, diagrama de classes, justificações
+│   └── DiagramaClasses.png
+├── iShopping/                # Projeto completo com código fonte
+│   ├── iShopping.sln
+│   └── ...
+└── readme.txt                # Este ficheiro (instalação e configuração)
+```
+ 
 ---
 
 ## 📁 Estrutura do ZIP de Entrega
