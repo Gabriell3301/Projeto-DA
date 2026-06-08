@@ -14,8 +14,8 @@ O **iShopping** é um protótipo de aplicação desktop que permite a famílias 
 
 | Nome | Número de Estudante |
 |---|---|
-| Gabriell Barbosa | — |
-| Maria Cotovio | — |
+| Gabriell Barbosa | 2025168383 |
+| Maria Cotovio | 2025190994 |
 
 ---
 
