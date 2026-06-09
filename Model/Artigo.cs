@@ -12,6 +12,6 @@ namespace Projeto_DA.Classes
         public string Nome { get; set; }
 
         public int TipoArtigoId { get; set; }
-        public TipoArtigo TipoArtigo { get; set; }
+        public virtual TipoArtigo TipoArtigo { get; set; }
     }
 }
