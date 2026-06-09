@@ -10,7 +10,7 @@ namespace Projeto_DA.Classes
     internal class Compra
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string Nome { get; set; }
         public DateTime DataCriacao { get; set; }
         public DateTime? DataFecho { get; set; }
         public bool Fechada { get; set; }
