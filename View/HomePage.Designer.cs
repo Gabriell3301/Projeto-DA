@@ -219,6 +219,7 @@
             this.buttonOrcamentos.TabIndex = 13;
             this.buttonOrcamentos.Text = "Orçamentos";
             this.buttonOrcamentos.UseVisualStyleBackColor = true;
+            this.buttonOrcamentos.Click += new System.EventHandler(this.buttonOrcamentos_Click);
             // 
             // buttonPlaneamentoCompras
             // 
@@ -229,6 +230,7 @@
             this.buttonPlaneamentoCompras.TabIndex = 14;
             this.buttonPlaneamentoCompras.Text = "Planeamento de Compras";
             this.buttonPlaneamentoCompras.UseVisualStyleBackColor = true;
+            this.buttonPlaneamentoCompras.Click += new System.EventHandler(this.buttonPlaneamentoCompras_Click);
             // 
             // buttonEstatisticas
             // 

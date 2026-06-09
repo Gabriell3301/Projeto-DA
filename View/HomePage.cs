@@ -145,5 +145,22 @@ namespace Projeto_DA.View
         {
 
         }
+
+        private void buttonOrcamentos_Click(object sender, EventArgs e)
+        {
+            using (var form = new OrcamentoForms(_utilizadorLogado))
+            {
+                form.ShowDialog();
+            }
+        }
+
+        private void buttonPlaneamentoCompras_Click(object sender, EventArgs e)
+        {
+            using (var form = new PlaneamentoCompras(_utilizadorLogado))
+            {
+                form.ShowDialog();
+                CarregarComprasEmAberto();
+            }
+        }
     }
 }
