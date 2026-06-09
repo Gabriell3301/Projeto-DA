@@ -61,13 +61,29 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(346, 150);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // numValor
             // 
             this.numValor.Location = new System.Drawing.Point(237, 183);
+            this.numValor.Maximum = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            0});
+            this.numValor.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numValor.Name = "numValor";
             this.numValor.Size = new System.Drawing.Size(121, 20);
             this.numValor.TabIndex = 1;
+            this.numValor.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // cmbMes
             // 
@@ -93,9 +109,24 @@
             // numAno
             // 
             this.numAno.Location = new System.Drawing.Point(125, 183);
+            this.numAno.Maximum = new decimal(new int[] {
+            2100,
+            0,
+            0,
+            0});
+            this.numAno.Minimum = new decimal(new int[] {
+            1900,
+            0,
+            0,
+            0});
             this.numAno.Name = "numAno";
             this.numAno.Size = new System.Drawing.Size(106, 20);
             this.numAno.TabIndex = 3;
+            this.numAno.Value = new decimal(new int[] {
+            1970,
+            0,
+            0,
+            0});
             // 
             // btnAdicionar
             // 
