@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using Projeto_DA.Model;
+using System.Linq;
+using System.Data.Entity;
 
 namespace Projeto_DA.View
 {
@@ -40,14 +42,29 @@ namespace Projeto_DA.View
         {
             dgvComprasEmAberto.Rows.Clear();
 
-            // Dados de exemplo para ver se está a funcionar
-            dgvComprasEmAberto.Rows.Add(1, "Compras Semanais",
-                DateTime.Now.AddDays(-3).ToString("dd/MM/yyyy"),
-                _utilizadorLogado?.Nome ?? "N/A", 12, 245.50);
+            using (AppDbContext db = new AppDbContext())
+            {
+                var comprasEmAberto = db.Compras
+                    .Include("UtilizadorCriacao")
+                    .Where(c => !c.Fechada)
+                    .ToList();
+                foreach (var compra in comprasEmAberto)
+                {
+                    int numItens = compra.Itens.Count(i => i.EhPrevisto);
+                    decimal valorEstimado = compra.Itens
+                        .Where(i => i.EhPrevisto)
+                        .Sum(i=> i.QuantidadePrevista * i.PrecoUnitario);
 
-            dgvComprasEmAberto.Rows.Add(2, "Produtos de Higiene",
-                DateTime.Now.AddDays(-1).ToString("dd/MM/yyyy"),
-                _utilizadorLogado?.Nome ?? "N/A", 7, 89.30);
+                    dgvComprasEmAberto.Rows.Add(
+                        compra.Id, 
+                        compra.Nome, 
+                        compra.DataCriacao.ToString("dd/MM/yyyy"), 
+                        compra.UtilizadorCriacao.Nome ?? "Desconecido",
+                        numItens,
+                        valorEstimado
+                    );
+                }
+            }
         }
 
         //Eventos dos botões
