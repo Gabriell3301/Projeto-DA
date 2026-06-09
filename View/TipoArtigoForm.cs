@@ -17,6 +17,7 @@ namespace Projeto_DA.View
         public TipoArtigoForm()
         {
             InitializeComponent();
+            CarregarDados();
         }
 
         private void CarregarDados()
@@ -44,6 +45,7 @@ namespace Projeto_DA.View
                 db.SaveChanges();
             }
             MessageBox.Show("Tipo de Artigo criado com sucesso.", "Sucesso");
+            CarregarDados();
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
