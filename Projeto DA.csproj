@@ -96,6 +96,12 @@
     <Compile Include="View\NovaCompraForm.Designer.cs">
       <DependentUpon>NovaCompraForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\OrcamentoForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\OrcamentoForms.Designer.cs">
+      <DependentUpon>OrcamentoForms.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\TipoArtigoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </Compile>
     <EmbeddedResource Include="View\NovaCompraForm.resx">
       <DependentUpon>NovaCompraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\OrcamentoForms.resx">
+      <DependentUpon>OrcamentoForms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TipoArtigoForm.resx">
       <DependentUpon>TipoArtigoForm.cs</DependentUpon>
