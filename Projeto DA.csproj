@@ -69,6 +69,12 @@
     <Compile Include="View\ArtigosForms.Designer.cs">
       <DependentUpon>ArtigosForms.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\EditarCompraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EditarCompraForm.Designer.cs">
+      <DependentUpon>EditarCompraForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormEditarTipoArtigo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +108,12 @@
     <Compile Include="View\OrcamentoForms.Designer.cs">
       <DependentUpon>OrcamentoForms.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\PlaneamentoCompras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PlaneamentoCompras.Designer.cs">
+      <DependentUpon>PlaneamentoCompras.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\TipoArtigoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +128,9 @@
     </Compile>
     <EmbeddedResource Include="View\ArtigosForms.resx">
       <DependentUpon>ArtigosForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\EditarCompraForm.resx">
+      <DependentUpon>EditarCompraForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormEditarTipoArtigo.resx">
       <DependentUpon>FormEditarTipoArtigo.cs</DependentUpon>
@@ -140,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\OrcamentoForms.resx">
       <DependentUpon>OrcamentoForms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PlaneamentoCompras.resx">
+      <DependentUpon>PlaneamentoCompras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\TipoArtigoForm.resx">
       <DependentUpon>TipoArtigoForm.cs</DependentUpon>
