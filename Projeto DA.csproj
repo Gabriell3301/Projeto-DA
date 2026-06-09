@@ -63,6 +63,12 @@
     <Compile Include="Model\ItemCompra.cs" />
     <Compile Include="Model\Orcamento.cs" />
     <Compile Include="Model\TipoArtigo.cs" />
+    <Compile Include="View\ArtigosForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ArtigosForms.Designer.cs">
+      <DependentUpon>ArtigosForms.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\FormEditarTipoArtigo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,15 @@
     <Compile Include="View\TipoArtigoForm.Designer.cs">
       <DependentUpon>TipoArtigoForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UtilizadoresForms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UtilizadoresForms.Designer.cs">
+      <DependentUpon>UtilizadoresForms.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\ArtigosForms.resx">
+      <DependentUpon>ArtigosForms.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\FormEditarTipoArtigo.resx">
       <DependentUpon>FormEditarTipoArtigo.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\TipoArtigoForm.resx">
       <DependentUpon>TipoArtigoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UtilizadoresForms.resx">
+      <DependentUpon>UtilizadoresForms.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
