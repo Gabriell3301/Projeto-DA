@@ -140,5 +140,10 @@ namespace Projeto_DA.View
                 form.ShowDialog();
             }
         }
+
+        private void dgvComprasEmAberto_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

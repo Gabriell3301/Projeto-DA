@@ -88,6 +88,7 @@
             this.dgvComprasEmAberto.RowHeadersWidth = 51;
             this.dgvComprasEmAberto.Size = new System.Drawing.Size(501, 357);
             this.dgvComprasEmAberto.TabIndex = 1;
+            this.dgvComprasEmAberto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvComprasEmAberto_CellContentClick);
             // 
             // Id
             // 
