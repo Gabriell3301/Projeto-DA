@@ -143,6 +143,7 @@ namespace Projeto_DA.View
             }
             else
             {
+
                 // Criar o novo item de planeamento
                 var novoItem = new ItemCompra
                 {
@@ -151,7 +152,7 @@ namespace Projeto_DA.View
                     QuantidadePrevista = quantidade,
                     EhPrevisto = true, // No planeamento todos são previstos
                     QuantidadeReal = 0,
-                    PrecoUnitario = 0
+                    PrecoUnitario = (int)numValor.Value, // Ajusta para o nome do teu controlo de preço
                 };
 
                 // Como o include do EF traz objetos associados, vamos buscar o Artigo para ele aparecer na Grid antes de gravares
@@ -193,56 +194,73 @@ namespace Projeto_DA.View
             {
                 using (var db = new AppDbContext())
                 {
-                    // Forçamos o Entity Framework a seguir a compra original da BD
+                    // Forçamos o Entity Framework a seguir a compra original da BD com os itens atuais
                     var compraBD = db.Compras.Include("Itens").FirstOrDefault(c => c.Id == _compraId);
 
-                    if (compraBD == null) return;
+                    if (compraBD == null)
+                    {
+                        MessageBox.Show("Compra não encontrada na Base de Dados!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
 
-                    // 1. Remover da BD os itens que o utilizador apagou na interface
+                    // 2. Remover da BD os itens que o utilizador apagou na interface gráfica
                     var itensParaApagar = compraBD.Itens
                         .Where(dbItem => !_compraAtual.Itens.Any(memItem => memItem.Id == dbItem.Id))
                         .ToList();
 
                     foreach (var item in itensParaApagar)
                     {
-                        db.ItensCompra.Remove(item); // Ajusta para o nome do teu DbSet de itens se for diferente (ex: db.ItensCompra)
+                        db.ItensCompra.Remove(item); // Se o teu DbSet se chamar 'ItensCompra', ajusta o nome aqui
                     }
 
-                    // 2. Atualizar ou Adicionar os itens atuais
+                    // 3. Adicionar ou Atualizar os itens
                     foreach (var memItem in _compraAtual.Itens)
                     {
                         if (memItem.Id == 0)
                         {
-                            // É um item novo, adicionamos à lista da BD
-                            compraBD.Itens.Add(new ItemCompra
+                            // É um item novo! Vamos criar um objeto limpo, passando apenas o ID do Artigo.
+                            // ATENÇÃO: NÃO atribuas o objeto 'memItem.Artigo' aqui para não baralhar o EF!
+                            var novoDbItem = new ItemCompra
                             {
-                                ArtigoId = memItem.ArtigoId,
+                                CompraId = _compraId,
+                                ArtigoId = memItem.ArtigoId, // Passamos apenas a FK numérica
                                 QuantidadePrevista = memItem.QuantidadePrevista,
                                 EhPrevisto = true,
                                 QuantidadeReal = 0,
-                                PrecoUnitario = 0
-                            });
+                                PrecoUnitario = 0,
+
+                                // Preencher os campos obrigatórios que a tua classe ItemCompra exige:
+                                UtilizadorCriacaoId = _utilizadorLogado.Id,
+                                DataCriacao = DateTime.Now
+                            };
+
+                            compraBD.Itens.Add(novoDbItem);
                         }
                         else
                         {
-                            // Item já existia, atualizamos apenas a quantidade planeada
+                            // O item já existia na BD, apenas atualizamos o que mudou no planeamento
                             var dbItem = compraBD.Itens.FirstOrDefault(i => i.Id == memItem.Id);
                             if (dbItem != null)
                             {
                                 dbItem.QuantidadePrevista = memItem.QuantidadePrevista;
+                                dbItem.UtilizadorAlteracaoId = _utilizadorLogado.Id;
+                                dbItem.DataAlteracao = DateTime.Now;
                             }
                         }
                     }
 
+                    // Guarda tudo de uma assentada só
                     db.SaveChanges();
                 }
 
-                MessageBox.Show("Planeamento guardado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close(); // Fecha o ecrã e volta ao menu principal
+                MessageBox.Show("Planeamento de compra guardado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Erro ao guardar: {ex.Message}", "Erro Crítico", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Se ainda der erro, esta mensagem vai descer ao detalhe ("InnerException") para nos dizer a coluna exata do problema
+                string erroDetalhado = ex.InnerException != null ? ex.InnerException.Message : ex.Message;
+                MessageBox.Show($"Erro ao guardar: {erroDetalhado}", "Erro Crítico da BD", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -284,6 +302,11 @@ namespace Projeto_DA.View
                 cmbArtigo.DisplayMember = "Nome";
                 cmbArtigo.ValueMember = "Id";
             }
+        }
+
+        private void cmbArtigo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

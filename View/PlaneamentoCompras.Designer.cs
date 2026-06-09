@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.dvgCompras = new System.Windows.Forms.DataGridView();
-            this.btnNova = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnExportarCSV = new System.Windows.Forms.Button();
-            this.cmbFiltro = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataCriação = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Utilizador = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nItens = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnNova = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnExportarCSV = new System.Windows.Forms.Button();
+            this.cmbFiltro = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dvgCompras)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,6 +57,37 @@
             this.dvgCompras.Name = "dvgCompras";
             this.dvgCompras.Size = new System.Drawing.Size(543, 150);
             this.dvgCompras.TabIndex = 0;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            // 
+            // DataCriação
+            // 
+            this.DataCriação.HeaderText = "Data Criação";
+            this.DataCriação.Name = "DataCriação";
+            // 
+            // Utilizador
+            // 
+            this.Utilizador.HeaderText = "Utilizador";
+            this.Utilizador.Name = "Utilizador";
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            // 
+            // nItens
+            // 
+            this.nItens.HeaderText = "N de Itens";
+            this.nItens.Name = "nItens";
             // 
             // btnNova
             // 
@@ -106,37 +137,6 @@
             this.label1.TabIndex = 5;
             this.label1.Text = "Filtro por Estado: ";
             // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            // 
-            // DataCriação
-            // 
-            this.DataCriação.HeaderText = "Data Criação";
-            this.DataCriação.Name = "DataCriação";
-            // 
-            // Utilizador
-            // 
-            this.Utilizador.HeaderText = "Utilizador";
-            this.Utilizador.Name = "Utilizador";
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            // 
-            // nItens
-            // 
-            this.nItens.HeaderText = "N de Itens";
-            this.nItens.Name = "nItens";
-            // 
             // PlaneamentoCompras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,6 +151,7 @@
             this.Name = "PlaneamentoCompras";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PlaneamentoCompras";
+            this.Load += new System.EventHandler(this.PlaneamentoCompras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dvgCompras)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

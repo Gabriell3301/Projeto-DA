@@ -32,25 +32,28 @@
             this.dataCriacao = new System.Windows.Forms.Label();
             this.utilizadorCriacao = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoArtigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Artigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QtdPrevista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecoUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbTipoArtigo = new System.Windows.Forms.ComboBox();
             this.cmbArtigo = new System.Windows.Forms.ComboBox();
             this.numQuantidade = new System.Windows.Forms.NumericUpDown();
             this.btnAdicionarItem = new System.Windows.Forms.Button();
             this.btnRemoverItem = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoArtigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Artigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QtdPrevista = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecoUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numValor = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantidade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numValor)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNome
@@ -94,6 +97,32 @@
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // TipoArtigo
+            // 
+            this.TipoArtigo.HeaderText = "Tipo Artigo";
+            this.TipoArtigo.Name = "TipoArtigo";
+            // 
+            // Artigo
+            // 
+            this.Artigo.HeaderText = "Artigo";
+            this.Artigo.Name = "Artigo";
+            // 
+            // QtdPrevista
+            // 
+            this.QtdPrevista.HeaderText = "Qtd. Prevista";
+            this.QtdPrevista.Name = "QtdPrevista";
+            // 
+            // PrecoUnitario
+            // 
+            this.PrecoUnitario.HeaderText = "Preço Unitário";
+            this.PrecoUnitario.Name = "PrecoUnitario";
+            // 
             // cmbTipoArtigo
             // 
             this.cmbTipoArtigo.FormattingEnabled = true;
@@ -110,10 +139,11 @@
             this.cmbArtigo.Name = "cmbArtigo";
             this.cmbArtigo.Size = new System.Drawing.Size(121, 21);
             this.cmbArtigo.TabIndex = 5;
+            this.cmbArtigo.SelectedIndexChanged += new System.EventHandler(this.cmbArtigo_SelectedIndexChanged);
             // 
             // numQuantidade
             // 
-            this.numQuantidade.Location = new System.Drawing.Point(260, 221);
+            this.numQuantidade.Location = new System.Drawing.Point(292, 203);
             this.numQuantidade.Name = "numQuantidade";
             this.numQuantidade.Size = new System.Drawing.Size(120, 20);
             this.numQuantidade.TabIndex = 6;
@@ -147,32 +177,6 @@
             this.btnGuardar.Text = "Guardar Compra";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
-            // 
-            // TipoArtigo
-            // 
-            this.TipoArtigo.HeaderText = "Tipo Artigo";
-            this.TipoArtigo.Name = "TipoArtigo";
-            // 
-            // Artigo
-            // 
-            this.Artigo.HeaderText = "Artigo";
-            this.Artigo.Name = "Artigo";
-            // 
-            // QtdPrevista
-            // 
-            this.QtdPrevista.HeaderText = "Qtd. Prevista";
-            this.QtdPrevista.Name = "QtdPrevista";
-            // 
-            // PrecoUnitario
-            // 
-            this.PrecoUnitario.HeaderText = "Preço Unitário";
-            this.PrecoUnitario.Name = "PrecoUnitario";
             // 
             // label1
             // 
@@ -222,17 +226,35 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(189, 224);
+            this.label6.Location = new System.Drawing.Point(221, 206);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 13);
             this.label6.TabIndex = 15;
             this.label6.Text = "Quantidade:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(206, 228);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(80, 13);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Preco Unitário: ";
+            // 
+            // numValor
+            // 
+            this.numValor.Location = new System.Drawing.Point(292, 226);
+            this.numValor.Name = "numValor";
+            this.numValor.Size = new System.Drawing.Size(120, 20);
+            this.numValor.TabIndex = 16;
             // 
             // EditarCompraForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(469, 333);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.numValor);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -255,6 +277,7 @@
             this.Load += new System.EventHandler(this.EditarCompraForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numQuantidade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numValor)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,5 +306,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown numValor;
     }
 }

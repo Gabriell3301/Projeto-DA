@@ -59,6 +59,7 @@
             this.labelOrcamento = new System.Windows.Forms.Label();
             this.labelGasto = new System.Windows.Forms.Label();
             this.labelDisponivel = new System.Windows.Forms.Label();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvComprasEmAberto)).BeginInit();
             this.panelSideBar.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -241,6 +242,7 @@
             this.buttonEstatisticas.TabIndex = 15;
             this.buttonEstatisticas.Text = "Estatísticas";
             this.buttonEstatisticas.UseVisualStyleBackColor = true;
+            this.buttonEstatisticas.Click += new System.EventHandler(this.buttonEstatisticas_Click);
             // 
             // panelSideBar
             // 
@@ -265,7 +267,8 @@
             this.artigosToolStripMenuItem,
             this.orçamentoToolStripMenuItem,
             this.comprasToolStripMenuItem,
-            this.estatísticasToolStripMenuItem});
+            this.estatísticasToolStripMenuItem,
+            this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -352,6 +355,13 @@
             this.labelDisponivel.TabIndex = 21;
             this.labelDisponivel.Text = "Orçamento Disponível:";
             // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -413,5 +423,6 @@
         private System.Windows.Forms.Label labelOrcamento;
         private System.Windows.Forms.Label labelGasto;
         private System.Windows.Forms.Label labelDisponivel;
+        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
     }
 }

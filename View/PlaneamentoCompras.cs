@@ -43,7 +43,8 @@ namespace Projeto_DA.View
                         c.Nome,
                         c.DataCriacao.ToString("dd/MM/yyyy"),
                         c.UtilizadorCriacao?.Nome ?? "—",
-                        c.Fechada ? "Fechada" : "Em Aberto"
+                        c.Fechada ? "Fechada" : "Em Aberto",
+                        c.Itens.Count
                     );
             }
         }
@@ -122,6 +123,11 @@ namespace Projeto_DA.View
         private void cmbFiltro_SelectedIndexChanged(object sender, EventArgs e)
         {
             CarregarCompras();
+        }
+
+        private void PlaneamentoCompras_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
