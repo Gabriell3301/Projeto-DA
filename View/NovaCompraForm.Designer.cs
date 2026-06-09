@@ -46,10 +46,10 @@
             this.labelNovaCompraTitulo.AutoSize = true;
             this.labelNovaCompraTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelNovaCompraTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNovaCompraTitulo.Location = new System.Drawing.Point(29, 22);
-            this.labelNovaCompraTitulo.Margin = new System.Windows.Forms.Padding(20, 0, 20, 0);
+            this.labelNovaCompraTitulo.Location = new System.Drawing.Point(22, 18);
+            this.labelNovaCompraTitulo.Margin = new System.Windows.Forms.Padding(15, 0, 15, 0);
             this.labelNovaCompraTitulo.Name = "labelNovaCompraTitulo";
-            this.labelNovaCompraTitulo.Size = new System.Drawing.Size(198, 32);
+            this.labelNovaCompraTitulo.Size = new System.Drawing.Size(158, 26);
             this.labelNovaCompraTitulo.TabIndex = 0;
             this.labelNovaCompraTitulo.Text = "Nova Compra";
             this.labelNovaCompraTitulo.Click += new System.EventHandler(this.labelNovaCompraTitulo_Click);
@@ -57,18 +57,20 @@
             // textBoxNomeCompra
             // 
             this.textBoxNomeCompra.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxNomeCompra.Location = new System.Drawing.Point(32, 167);
+            this.textBoxNomeCompra.Location = new System.Drawing.Point(24, 136);
+            this.textBoxNomeCompra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxNomeCompra.Multiline = true;
             this.textBoxNomeCompra.Name = "textBoxNomeCompra";
-            this.textBoxNomeCompra.Size = new System.Drawing.Size(404, 80);
+            this.textBoxNomeCompra.Size = new System.Drawing.Size(303, 65);
             this.textBoxNomeCompra.TabIndex = 6;
             // 
             // labelNomeCompra
             // 
             this.labelNomeCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNomeCompra.Location = new System.Drawing.Point(31, 136);
+            this.labelNomeCompra.Location = new System.Drawing.Point(23, 110);
+            this.labelNomeCompra.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelNomeCompra.Name = "labelNomeCompra";
-            this.labelNomeCompra.Size = new System.Drawing.Size(171, 28);
+            this.labelNomeCompra.Size = new System.Drawing.Size(128, 23);
             this.labelNomeCompra.TabIndex = 7;
             this.labelNomeCompra.Text = "Nome da Compra";
             // 
@@ -76,35 +78,39 @@
             // 
             this.labelDataCriacaoCompra.AutoSize = true;
             this.labelDataCriacaoCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDataCriacaoCompra.Location = new System.Drawing.Point(31, 288);
+            this.labelDataCriacaoCompra.Location = new System.Drawing.Point(23, 234);
+            this.labelDataCriacaoCompra.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDataCriacaoCompra.Name = "labelDataCriacaoCompra";
-            this.labelDataCriacaoCompra.Size = new System.Drawing.Size(131, 20);
+            this.labelDataCriacaoCompra.Size = new System.Drawing.Size(110, 17);
             this.labelDataCriacaoCompra.TabIndex = 8;
             this.labelDataCriacaoCompra.Text = "Data de Criação";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(32, 311);
+            this.dateTimePicker1.Location = new System.Drawing.Point(24, 253);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(404, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(304, 20);
             this.dateTimePicker1.TabIndex = 9;
             // 
             // labelOrcamentop
             // 
             this.labelOrcamentop.AutoSize = true;
             this.labelOrcamentop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOrcamentop.Location = new System.Drawing.Point(35, 400);
+            this.labelOrcamentop.Location = new System.Drawing.Point(26, 325);
+            this.labelOrcamentop.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelOrcamentop.Name = "labelOrcamentop";
-            this.labelOrcamentop.Size = new System.Drawing.Size(167, 20);
+            this.labelOrcamentop.Size = new System.Drawing.Size(140, 17);
             this.labelOrcamentop.TabIndex = 10;
             this.labelOrcamentop.Text = "Orçamento Estimado";
             // 
             // numericUpDown1
             // 
             this.numericUpDown1.DecimalPlaces = 2;
-            this.numericUpDown1.Location = new System.Drawing.Point(32, 437);
+            this.numericUpDown1.Location = new System.Drawing.Point(24, 355);
+            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(404, 22);
+            this.numericUpDown1.Size = new System.Drawing.Size(303, 20);
             this.numericUpDown1.TabIndex = 11;
             this.numericUpDown1.ThousandsSeparator = true;
             // 
@@ -112,38 +118,43 @@
             // 
             this.labelEuro.AutoSize = true;
             this.labelEuro.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelEuro.Location = new System.Drawing.Point(128, 439);
+            this.labelEuro.Location = new System.Drawing.Point(96, 357);
+            this.labelEuro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelEuro.Name = "labelEuro";
-            this.labelEuro.Size = new System.Drawing.Size(14, 16);
+            this.labelEuro.Size = new System.Drawing.Size(13, 13);
             this.labelEuro.TabIndex = 12;
             this.labelEuro.Text = "€";
             // 
             // buttonCriarCompra
             // 
             this.buttonCriarCompra.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.buttonCriarCompra.Location = new System.Drawing.Point(273, 540);
+            this.buttonCriarCompra.Location = new System.Drawing.Point(205, 439);
+            this.buttonCriarCompra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCriarCompra.Name = "buttonCriarCompra";
-            this.buttonCriarCompra.Size = new System.Drawing.Size(201, 34);
+            this.buttonCriarCompra.Size = new System.Drawing.Size(151, 28);
             this.buttonCriarCompra.TabIndex = 14;
             this.buttonCriarCompra.Text = "Criar Compra";
             this.buttonCriarCompra.UseVisualStyleBackColor = false;
+            this.buttonCriarCompra.Click += new System.EventHandler(this.buttonCriarCompra_Click);
             // 
             // buttonCancelarCompra
             // 
             this.buttonCancelarCompra.BackColor = System.Drawing.Color.MistyRose;
-            this.buttonCancelarCompra.Location = new System.Drawing.Point(26, 540);
+            this.buttonCancelarCompra.Location = new System.Drawing.Point(20, 439);
+            this.buttonCancelarCompra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonCancelarCompra.Name = "buttonCancelarCompra";
-            this.buttonCancelarCompra.Size = new System.Drawing.Size(201, 34);
+            this.buttonCancelarCompra.Size = new System.Drawing.Size(151, 28);
             this.buttonCancelarCompra.TabIndex = 15;
             this.buttonCancelarCompra.Text = "Cancelar";
             this.buttonCancelarCompra.UseVisualStyleBackColor = false;
+            this.buttonCancelarCompra.Click += new System.EventHandler(this.buttonCancelarCompra_Click);
             // 
             // NovaCompraForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(502, 646);
+            this.ClientSize = new System.Drawing.Size(376, 525);
             this.Controls.Add(this.buttonCancelarCompra);
             this.Controls.Add(this.buttonCriarCompra);
             this.Controls.Add(this.labelEuro);
@@ -154,6 +165,7 @@
             this.Controls.Add(this.labelNomeCompra);
             this.Controls.Add(this.textBoxNomeCompra);
             this.Controls.Add(this.labelNovaCompraTitulo);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "NovaCompraForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "NovaCompraForm";
