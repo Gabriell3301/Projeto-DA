@@ -111,7 +111,34 @@ namespace Projeto_DA.View
 
         private void buttonTiposArtigos_Click(object sender, EventArgs e)
         {
+            using (var form = new TipoArtigoForm())
+            {
+                form.ShowDialog();
+            }
+        }
 
+        private void buttonArtigos_Click(object sender, EventArgs e)
+        {
+            using (var form = new ArtigosForms())
+            {
+                form.ShowDialog();
+            }
+        }
+
+        private void utilizadoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var form = new UtilizadoresForms())
+            {
+                form.ShowDialog();
+            }
+        }
+
+        private void artigosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var form = new ArtigosForms())
+            {
+                form.ShowDialog();
+            }
         }
     }
 }
