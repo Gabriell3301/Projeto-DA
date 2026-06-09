@@ -105,6 +105,7 @@
             this.Controls.Add(this.dgvTiposArtigos);
             this.Name = "TipoArtigoForm";
             this.Text = "TipoArtigoForm";
+            this.Load += new System.EventHandler(this.TipoArtigoForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvTiposArtigos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

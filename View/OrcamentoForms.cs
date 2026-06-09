@@ -165,5 +165,10 @@ namespace Projeto_DA.View
         {
 
         }
+
+        private void OrcamentoForms_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

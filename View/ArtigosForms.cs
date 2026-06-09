@@ -1,7 +1,9 @@
 ﻿using Projeto_DA.Classes;
+using Projeto_DA.Controller;
 using System;
-using System.Data.Entity;
+using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -19,36 +21,31 @@ namespace Projeto_DA.View
 
         private void CarregarTipos()
         {
-            using (var db = new AppDbContext())
-            {
-                // Filtro
-                cmbTipoArtigo.Items.Clear();
-                cmbTipoArtigo.Items.Add("Todos");
-                foreach (var t in db.TiposArtigos.ToList())
-                    cmbTipoArtigo.Items.Add(t);
-                cmbTipoArtigo.DisplayMember = "Nome";
-                cmbTipoArtigo.SelectedIndex = 0;
+            var tipos = TipoArtigoController.GetTodos();
 
-                // ComboBox do formulário
-                cmbTipoArtigoNovo.DataSource = db.TiposArtigos.ToList();
-                cmbTipoArtigoNovo.DisplayMember = "Nome";
-                cmbTipoArtigoNovo.ValueMember = "Id";
-            }
+            cmbTipoArtigo.Items.Clear();
+            cmbTipoArtigo.Items.Add("Todos");
+            foreach (var t in tipos)
+                cmbTipoArtigo.Items.Add(t);
+            cmbTipoArtigo.DisplayMember = "Nome";
+            cmbTipoArtigo.SelectedIndex = 0;
+
+            cmbTipoArtigoNovo.DataSource = TipoArtigoController.GetTodos();
+            cmbTipoArtigoNovo.DisplayMember = "Nome";
+            cmbTipoArtigoNovo.ValueMember = "Id";
         }
 
         private void CarregarArtigos()
         {
-            using (var db = new AppDbContext())
-            {
-                var query = db.Artigos.Include(a => a.TipoArtigo).AsQueryable();
+            List<Artigo> artigos;
+            if (cmbTipoArtigo.SelectedItem is TipoArtigo tipo)
+                artigos = ArtigoController.GetPorTipo(tipo.Id);
+            else
+                artigos = ArtigoController.GetTodos();
 
-                if (cmbTipoArtigo.SelectedItem is TipoArtigo tipo)
-                    query = query.Where(a => a.TipoArtigoId == tipo.Id);
-
-                dataGridView1.Rows.Clear();
-                foreach (var a in query.ToList())
-                    dataGridView1.Rows.Add(a.Id, a.Nome, a.TipoArtigo?.Nome);
-            }
+            dataGridView1.Rows.Clear();
+            foreach (var a in artigos)
+                dataGridView1.Rows.Add(a.Id, a.Nome, a.TipoArtigo?.Nome);
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
@@ -61,24 +58,13 @@ namespace Projeto_DA.View
 
             try
             {
-                using (var db = new AppDbContext())
-                {
-                    if (_editandoId == null)
-                    {
-                        db.Artigos.Add(new Artigo
-                        {
-                            Nome = txtNomeArtigo.Text.Trim(),
-                            TipoArtigoId = (int)cmbTipoArtigoNovo.SelectedValue
-                        });
-                    }
-                    else
-                    {
-                        var artigo = db.Artigos.Find(_editandoId);
-                        artigo.Nome = txtNomeArtigo.Text.Trim();
-                        artigo.TipoArtigoId = (int)cmbTipoArtigoNovo.SelectedValue;
-                    }
-                    db.SaveChanges();
-                }
+                var artigo = new Artigo
+{
+    Id = _editandoId ?? 0,
+    Nome = txtNomeArtigo.Text.Trim(),
+    TipoArtigoId = (int)cmbTipoArtigoNovo.SelectedValue
+};
+ArtigoController.Guardar(artigo);
                 Limpar();
                 CarregarArtigos();
             }
@@ -149,6 +135,11 @@ namespace Projeto_DA.View
             cmbTipoArtigoNovo.SelectedIndex = -1;
             _editandoId = null;
             btnAdicionar.Text = "Adicionar";
+        }
+
+        private void ArtigosForms_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

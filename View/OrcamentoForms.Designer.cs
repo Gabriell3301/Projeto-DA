@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mês = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Ano = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValoMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CriadoPor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numValor = new System.Windows.Forms.NumericUpDown();
             this.cmbMes = new System.Windows.Forms.ComboBox();
             this.numAno = new System.Windows.Forms.NumericUpDown();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mês = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Ano = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ValoMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CriadoPor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -62,6 +62,33 @@
             this.dataGridView1.Size = new System.Drawing.Size(346, 150);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // Mês
+            // 
+            this.Mês.HeaderText = "Mês";
+            this.Mês.Name = "Mês";
+            // 
+            // Ano
+            // 
+            this.Ano.HeaderText = "Ano";
+            this.Ano.Name = "Ano";
+            this.Ano.Visible = false;
+            // 
+            // ValoMax
+            // 
+            this.ValoMax.HeaderText = "Valor Máximo";
+            this.ValoMax.Name = "ValoMax";
+            // 
+            // CriadoPor
+            // 
+            this.CriadoPor.HeaderText = "Criado Por";
+            this.CriadoPor.Name = "CriadoPor";
             // 
             // numValor
             // 
@@ -158,33 +185,6 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
-            // 
-            // Mês
-            // 
-            this.Mês.HeaderText = "Mês";
-            this.Mês.Name = "Mês";
-            // 
-            // Ano
-            // 
-            this.Ano.HeaderText = "Ano";
-            this.Ano.Name = "Ano";
-            this.Ano.Visible = false;
-            // 
-            // ValoMax
-            // 
-            this.ValoMax.HeaderText = "Valor Máximo";
-            this.ValoMax.Name = "ValoMax";
-            // 
-            // CriadoPor
-            // 
-            this.CriadoPor.HeaderText = "Criado Por";
-            this.CriadoPor.Name = "CriadoPor";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -229,6 +229,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "OrcamentoForms";
             this.Text = "OrcamentoForms";
+            this.Load += new System.EventHandler(this.OrcamentoForms_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numValor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numAno)).EndInit();

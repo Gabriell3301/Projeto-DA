@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Projeto_DA.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,12 +22,9 @@ namespace Projeto_DA.View
 
         private void CarregarUtilizadores()
         {
-            using (var db = new AppDbContext())
-            {
-                dataGridView1.Rows.Clear();
-                foreach (var u in db.Utilizadores.ToList())
-                    dataGridView1.Rows.Add(u.Id, u.Nome, u.Username, "****");
-            }
+            dataGridView1.Rows.Clear();
+            foreach (var u in UtilizadorController.GetTodos())
+                dataGridView1.Rows.Add(u.Id, u.Nome, u.Username, "****");
         }
 
         private void btnNovo_Click(object sender, EventArgs e) => Limpar();
@@ -46,35 +44,20 @@ namespace Projeto_DA.View
             {
                 using (var db = new AppDbContext())
                 {
-                    // Verificar username único
-                    bool existe = db.Utilizadores.Any(u =>
-                        u.Username == txtUtilizador.Text && u.Id != (_editandoId ?? 0));
-
-                    if (existe)
+                    if (UtilizadorController.UsernameExiste(txtUtilizador.Text.Trim(), _editandoId ?? 0))
                     {
-                        MessageBox.Show("Username já existe.", "Aviso",
-                            MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Username já existe.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
 
-                    if (_editandoId == null)
+                    var u = new Utilizador
                     {
-                        db.Utilizadores.Add(new Utilizador
-                        {
-                            Nome = txtNome.Text.Trim(),
-                            Username = txtUtilizador.Text.Trim(),
-                            Password = txtSenha.Text
-                        });
-                    }
-                    else
-                    {
-                        var u = db.Utilizadores.Find(_editandoId);
-                        u.Nome = txtNome.Text.Trim();
-                        u.Username = txtUtilizador.Text.Trim();
-                        u.Password = txtSenha.Text;
-                    }
-
-                    db.SaveChanges();
+                        Id = _editandoId ?? 0,
+                        Nome = txtNome.Text.Trim(),
+                        Username = txtUtilizador.Text.Trim(),
+                        Password = txtSenha.Text
+                    };
+                    UtilizadorController.Guardar(u);
                 }
 
                 Limpar();
@@ -107,12 +90,7 @@ namespace Projeto_DA.View
             int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
             try
             {
-                using (var db = new AppDbContext())
-                {
-                    var u = db.Utilizadores.Find(id);
-                    db.Utilizadores.Remove(u);
-                    db.SaveChanges();
-                }
+                UtilizadorController.Eliminar(id);
                 Limpar();
                 CarregarUtilizadores();
             }
@@ -132,6 +110,11 @@ namespace Projeto_DA.View
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void UtilizadoresForms_Load(object sender, EventArgs e)
         {
 
         }

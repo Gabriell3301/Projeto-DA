@@ -1,4 +1,5 @@
 ﻿using Projeto_DA.Classes;
+using Projeto_DA.Controller;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,11 +23,7 @@ namespace Projeto_DA.View
 
         private void CarregarDados()
         {
-            using (var db = new AppDbContext())
-            {
-                var tipos = db.TiposArtigos.ToList();
-                dgvTiposArtigos.DataSource = tipos;
-            }
+            dgvTiposArtigos.DataSource = TipoArtigoController.GetTodos();
         }
 
         private void btnAdicionar_Click(object sender, EventArgs e)
@@ -35,15 +32,12 @@ namespace Projeto_DA.View
             {
                 MessageBox.Show("Insira um Nome para o novo tipo de artigo.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-            using (var db = new AppDbContext())
+            if (String.IsNullOrEmpty(txtNome.Text))
             {
-                TipoArtigo tipo = new TipoArtigo()
-                {
-                    Nome = txtNome.Text
-                };
-                db.TiposArtigos.Add(tipo);
-                db.SaveChanges();
+                MessageBox.Show("Insira um Nome para o novo tipo de artigo.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
+            TipoArtigoController.Guardar(new TipoArtigo { Nome = txtNome.Text });
             MessageBox.Show("Tipo de Artigo criado com sucesso.", "Sucesso");
             CarregarDados();
         }
@@ -87,17 +81,8 @@ namespace Projeto_DA.View
 
             using (var db = new AppDbContext())
             {
-                TipoArtigo tipo = db.TiposArtigos.Find(id);
-
-                if (tipo == null)
-                {
-                    MessageBox.Show("Tipo de artigo não encontrado.");
-                    return;
-                }
-
-                db.TiposArtigos.Remove(tipo);
-
-                db.SaveChanges();
+                TipoArtigoController.Eliminar(id);
+                CarregarDados();
             }
         }
 
@@ -105,6 +90,11 @@ namespace Projeto_DA.View
         {
             dgvTiposArtigos.ClearSelection();
             txtNome.Clear();
+        }
+
+        private void TipoArtigoForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

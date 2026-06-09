@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Utilizador = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtUtilizador = new System.Windows.Forms.TextBox();
             this.txtSenha = new System.Windows.Forms.TextBox();
@@ -39,10 +43,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Utilizador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +59,27 @@
             this.dataGridView1.Size = new System.Drawing.Size(332, 150);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            this.Id.Visible = false;
+            // 
+            // Nome
+            // 
+            this.Nome.HeaderText = "Nome";
+            this.Nome.Name = "Nome";
+            // 
+            // Utilizador
+            // 
+            this.Utilizador.HeaderText = "Utilizador";
+            this.Utilizador.Name = "Utilizador";
+            // 
+            // Senha
+            // 
+            this.Senha.HeaderText = "Senha";
+            this.Senha.Name = "Senha";
             // 
             // txtNome
             // 
@@ -148,27 +169,6 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Senha: ";
             // 
-            // Id
-            // 
-            this.Id.HeaderText = "Id";
-            this.Id.Name = "Id";
-            this.Id.Visible = false;
-            // 
-            // Nome
-            // 
-            this.Nome.HeaderText = "Nome";
-            this.Nome.Name = "Nome";
-            // 
-            // Utilizador
-            // 
-            this.Utilizador.HeaderText = "Utilizador";
-            this.Utilizador.Name = "Utilizador";
-            // 
-            // Senha
-            // 
-            this.Senha.HeaderText = "Senha";
-            this.Senha.Name = "Senha";
-            // 
             // UtilizadoresForms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,6 +187,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "UtilizadoresForms";
             this.Text = "UtilizadoresForms";
+            this.Load += new System.EventHandler(this.UtilizadoresForms_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

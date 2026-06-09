@@ -1,4 +1,5 @@
-﻿using Projeto_DA.View;
+﻿using Projeto_DA.Controller;
+using Projeto_DA.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,23 +33,22 @@ namespace Projeto_DA
                 return;
             }
 
-            using (AppDbContext db = new AppDbContext())
+            var utilizador = UtilizadorController.Autenticar(login, password);
+            if (utilizador != null)
             {
-                Utilizador utilizador = db.Utilizadores.FirstOrDefault(u => u.Username == login
-                && u.Password == password);
-
-                if (utilizador != null)
-                {
-                    this.DialogResult = DialogResult.OK;
-                    UtilizadorLogado = utilizador;
-                    this.Close();
-                }
-                else
-                {
-
-                    MessageBox.Show("Username ou Password incorretos");
-                }
+                this.DialogResult = DialogResult.OK;
+                UtilizadorLogado = utilizador;
+                this.Close();
             }
+            else
+            {
+                MessageBox.Show("Username ou Password incorretos");
+            }
+        }
+
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
