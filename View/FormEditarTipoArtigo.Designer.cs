@@ -70,6 +70,7 @@
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnCancelar);
             this.Name = "FormEditarTipoArtigo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormEditarTipoArtigo";
             this.ResumeLayout(false);
             this.PerformLayout();
